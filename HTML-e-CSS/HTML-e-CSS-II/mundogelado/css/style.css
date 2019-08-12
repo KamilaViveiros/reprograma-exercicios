@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+}
+
+
+
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0 auto;
+}
+
+
+.navegacao {
+    padding: 20px;
+    width: 100vw;
+    font-size: 15px;
+    background-color: #a0bed0;
+    position: fixed;
+    top:0;
+}
+    
+
+
+.menu {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    margin-right: 200px;
+    
+}
+.menu__item {
+    text-decoration: none;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    width: 100%; 
+    background-image: url(../images/foto-banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: scroll;
+    flex-direction: column;
+    margin-top: 80px;
+    
+}
+
+.cabecalho__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+}
+
+.cabecalho__titulo {
+    font-size: 105px;
+    color: #ffff;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 30px;
+    font-family: 'Varela round', sans-serif;
+    } 
+
+
+
+.btn {
+    
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #a0bed0;
+    padding: 20px;
+    font-size: 12px;
+    border: none;
+    border-radius: 10px;
+    margin: 30px;
+    color: #FFFFFF;
+}
+
+.apresentacao {
+    margin: 0 auto;
+    text-align: center;
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 50px;
+
+}
+
+.apresentacao__texto {
+    padding: 20px;
+}
+
+
+.destaque {
+    margin: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.simaria_texto {
+    padding: 30px;
+ 
+    
+}
+.simaria > img {
+    width: 700px;
+}
+
+.mosaico{
+    display: flex;
+    align-items: center;
+}
+
+.groelandia_img, .antartica_img {
+    width: 50%;
+    height: 50%;
+}
+
+.groelandia_texto, .antartida_texto {
+    width: 50%;
+}
+
+
+
+
+/* .icones-sociais li {
+        display: inline-block;
+    }
+    
+.icones-sociais a {
+        width: 40px;
+        height: 40px;
+        display: block;
+        text-indent: -99999px;
+        margin-right:15px;
+}
+
+.facebook {
+    background-image: url(../images/facebook.png)
+}
+
+.youtube {
+    background-image: url(../images/youtube.png)
+}
+
+.twitter {
+    background-image: url(../images/twitter.png)
+} */

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery - Reprograma</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <p>Clique aqui.</p>
+
+    <br> Name:
+    <input type="text" name="nome">
+    <input type="password" name="password" placeholder="password">
+
+
+    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+    <script>
+        $("p").show(function () {
+            alert("p clicado");
+        });
+
+        $(document).ready(function () {
+            $("input").focus(function () {
+                // $(this).css("background-color", "#00a458");
+                $(this).addClass('fundoVerde');
+                $(this).removeClass('fundoVerde');
+
+            });
+        });
+
+        // $("p").mouseenter(function() {
+        //     alert("hello, it's me");
+        // });
+    </script>
+
+</body>
+
+</html>

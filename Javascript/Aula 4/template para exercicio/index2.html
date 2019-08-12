@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <div class="search">
+                <input type="text" class="input__search" />
+                <button>Pesquisar</button>
+            </div>
+            <!-- Boxes -->
+            <div class="thumbnails">
+            </div>
+
+
+
+</body>
+
+<script>
+    let fotografias = [
+        {
+            url: 'https://github.com/reprograma',
+            imagem: 'images/pic01.jpg',
+            titulo: 'Nascetur nunc varius commodo',
+            descricao: 'Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.'
+        },
+        {
+            url: 'https://github.com/reprograma',
+            imagem: 'images/pic02.jpg',
+            titulo: 'Nascetur nunc varius commodo',
+            descricao: 'Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.'
+        },
+        {
+            url: 'https://github.com/reprograma',
+            imagem: 'images/pic03.jpg',
+            titulo: 'Nascetur nunc varius commodo',
+            descricao: 'Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.'
+        },
+        {
+            url: 'https://github.com/reprograma',
+            imagem: 'images/pic04.jpg',
+            titulo: 'Nascetur nunc varius commodo',
+            descricao: 'Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.'
+        },
+        {
+            url: 'https://github.com/reprograma',
+            imagem: 'images/pic05.jpg',
+            titulo: 'Nascetur nunc varius commodo',
+            descricao: 'Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.'
+        },
+        {
+            url: 'https://youtu.be/s6zR2T9vn2c',
+            imagem: 'images/pic06.jpg',
+            titulo: 'Nascetur nunc varius commodo',
+            descricao: 'Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.'
+        },
+
+    ]
+
+    const createCard = () => {
+        return fotografias.map((foto) => {
+            return (
+                ` <div class="box">
+                    <img src=${foto.imagem} class="image fit"/>
+                    <div class="inner">
+                        <h3>${foto.titulo}</h3>
+                        <p>${foto.descricao}
+                        </p>
+                        <a href=${foto.url} class="button fit" data-poptrox="youtube,800x400">Watch</a>
+                    </div>
+                </div> `
+            )
+        }).join("")
+
+    }
+    document.querySelector('.thumbnails').innerHTML += createCard();
+
+
+
+
+    const btn = document.querySelector('button')
+    btn.addEventListener('click', () => {
+        let inputValue = document.querySelector('input').value;
+        let filtro =   fotografias.filter((fil) => {
+   
+      
+            return fil.descricao.includes(inputValue) || fil.titulo.includes()
+
+        })
+
+    })
+
+
+</script>
+
+</html>

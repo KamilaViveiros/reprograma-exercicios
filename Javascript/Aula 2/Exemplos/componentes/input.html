@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Exemplo</title>
+</head>
+<button></button>
+<body>
+    <div></div>
+</body>
+
+<script>
+    
+
+    const listComponent = (type="text") => {
+            return (
+                `
+                <input type=${type} value="">                
+                `
+            )
+        }
+
+    // const creatButton = () => {
+    //         return (
+    //             `
+    //             <button> Adicionar </button>               
+    //             `
+    //         )
+    //     }
+
+
+
+
+    document.body.innerHTML = listComponent();
+    
+</script>
+
+</html>

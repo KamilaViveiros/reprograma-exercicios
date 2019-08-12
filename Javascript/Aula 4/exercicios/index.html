@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Exercícios
+    // 1º exercício
+    // Crie um array de alunas contendo as informações: nome, idade, materia_preferida, conforme exemplo abaixo:
+
+    const alunas = [
+        {
+            nome: "Kamila",
+            idade: 23,
+            materia_preferida: "JavaScript"
+        },
+        {
+            nome: "Michelle",
+            idade: 15,
+            materia_preferida: "JQuery"
+        },
+        {
+            nome: "Ingrid",
+            idade: 30,
+            materia_preferida: "Bootstrap"
+        }
+    ];
+
+    const creatMap = () => {
+        return alunas.map((amigas) => {
+            return (
+                `
+                    <div class="">
+                        <p>${amigas.nome}</p>
+                        <p>${amigas.idade}</p>
+                        <p>${amigas.materia_preferida}</p>
+                    </div> `
+            )
+        }).join("")
+
+    }
+    document.body.innerHTML = createMap();
+
+
+
+
+</script>
+
+</html>
+
+
+
+
+<!-- 1.1 Utilizando o map
+Percorra o array alunas e retorne outro array contendo apenas as idades de todas as alunas. Exemplo:
+
+[
+  23,
+  15,
+  30
+]
+1.2 Utilizando o filter
+Retorne um array que contenha os dados da alunas que tem a idade maior que 24. Exemplo:
+
+[
+  {  nome: "AAA", idade: 30, materia_preferida: "Bootstrap" }
+]
+1.3 Utilizando o find
+Retorne um array que encontre as alunas na qual a matéria preferida seja JavaScript. Exemplo:
+
+[
+  { nome: "XXX", idade: 23, materia_preferida: "JavaScript" }
+] -->

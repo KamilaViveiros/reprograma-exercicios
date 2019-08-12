@@ -1,0 +1,48 @@
+body {
+    text-align: center;
+    margin: 0 auto;
+    background-image: url(./bg_twinpeaks.jpg);
+    background-size: cover;
+    height: 95vh;
+}
+
+img {
+    width: 20%;
+    position: absolute;
+	bottom: 0;
+
+}
+
+@media (max-width: 480px) {
+    body {
+    text-align: center;
+    margin: 0 auto;
+    background-image: url(./bg_twinpeaks.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    }
+
+    img {
+    width: 50%;
+    position: absolute;
+	bottom: 0;
+    }
+}
+
+@media (max-width: 620px) {
+    body {
+    text-align: center;
+    margin: 0 auto;
+    background-image: url(./bg_twinpeaks.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    }
+
+    img {
+    width: 50%;
+    position: absolute;
+	bottom: 0;
+    }
+}

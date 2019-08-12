@@ -1,0 +1,50 @@
+.banner {
+    background-image: url(../images/bg3.jpg);
+    background-size: cover;
+    overflow: hidden;
+   
+}
+
+.banner-content{
+    height: 85vh;
+    @include flex(flex-end, center);
+}
+
+.banner-phone{
+    width: 50%;
+    text-align: center;
+}
+
+.phone {
+    height: 40vw;
+    margin-bottom: -140px;
+  
+}
+
+.banner-img{
+    width: 50%;
+}
+
+.banner-text {
+    width: 50%;
+    padding-bottom: 50px;
+    
+}
+
+h2{
+    @include title(unset, $color-secondary);
+}
+
+h5{
+    color: $color-secondary;
+    font-size: $font-size-text;
+}
+
+.btn-fill{
+    @include button(10px, 20px, $color-icon, $color-bg);
+}
+
+.btn-simple{
+    @include button(10px, 20px, transparent, $color-secondary);
+    font-size: 20px;
+}

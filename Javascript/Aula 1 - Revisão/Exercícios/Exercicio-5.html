@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Exercício - 4 </title>
+</head>
+
+<body>
+
+   
+        <ul></ul>
+  
+    <input type="text" id="texto" />
+    <button onclick="adicionar()">Enviar</button>
+</body>
+
+<script>
+  let textoInput = document.querySelector('input')
+
+    function adicionar() {
+
+        let value = textoInput.value;
+        // pegamos a UL
+        let getUl = document.querySelector('ul');
+        // Criar elemento LI
+        let criarLi = document.createElement('li');
+
+        criarLi.textContent = value;
+
+        getUl.appendChild(criarLi);
+        limparInput()
+     }
+
+    function limparInput(){
+        textoInput.value = "";
+    }
+    
+
+
+
+
+</script>
+
+</html>

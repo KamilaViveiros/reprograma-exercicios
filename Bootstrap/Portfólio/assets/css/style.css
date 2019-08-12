@@ -1,0 +1,16 @@
+/* .navbar {
+    top: 0;
+    width: 100%;
+    z-index: 9;
+} */
+
+.cartaz {
+    background-image: url("../img/header-bg.jpg");
+    width: 100%;
+    height: 70vh;
+}
+
+.form {
+    background-image: url("../img/papel-de-parede-mapa-mundi-preto.jpg")
+}
+

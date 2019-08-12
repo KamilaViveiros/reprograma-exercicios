@@ -1,0 +1,18 @@
+body {
+    background-image: url(./bg.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+#container__cidade {
+    display: none;
+}
+
+select {
+    font-size: 20px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,29 @@
+.section-clients{
+    text-align: center;
+    background: $color-bg;
+   
+    h5{
+        color:lighten($color-primary, 50%)
+    }
+}
+
+
+
+.logos ul{
+    @include flex(center, space-between);
+
+    li + li {
+        margin-left: 30px;
+    }
+    
+
+}
+
+.row{
+    @include flex(center, space-between);
+
+    img{
+        width: 50%;
+    }
+
+}

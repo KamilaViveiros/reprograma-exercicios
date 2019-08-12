@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<title>Arrays</title>
+</head>
+
+<body>
+	<div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 offset-md-3">
+					<h3>Confira quem está na lista</h3>
+					<form id="form-do-role">
+						<div class="form-row align-items-center">
+							<div class="col-auto">
+								<label class="sr-only" for="nome">Nome</label>
+								<input type="text" class="form-control mb-2" id="nome" placeholder="Nome">
+							</div>
+							<div class="col-auto">
+								<button type="submit" required class="btn btn-primary mb-2">Checar</button>
+							</div>
+					</form>
+					<div id="status"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<script src="./main.js"></script>
+</body>
+
+<script type="text/javascript">
+
+const nomesNoRole = [
+  "Adam", "Alex", "Aaron", "Ben", "Carl", "Dan", "David", "Edward", "Fred", "Frank", "George", "Hal", "Hank", "Ike", "John", "Jack", "Joe", "Larry", "Monte", "Matthew", "Mark", "Nathan", "Otto", "Paul", "Peter", "Roger", "Roger", "Steve", "Thomas", "Tim", "Ty", "Victor", "Walter"
+]
+
+const validacao = (nome) => {
+  // valida se campo está vazio, caso não, dá um throw para ele 
+  // cair no catch !
+  if(nome === '') throw 'O campo está vazio'
+  // valida se nome é do tipo string, senão dá um throw para ele
+  // cair no catch
+  if(typeof nome !== "string") throw 'Tipo inválida'
+}
+
+const procuraNome = nome => nomesNoRole.find((fulanoQueTavaNoRole, i) => {
+  // procura o primeiro elemento no array que é verdadeiro
+  // de acordo com a operação lógica que você passar
+  return nome.toLowerCase() === fulanoQueTavaNoRole.toLowerCase()
+})
+
+const exibirNome = nome => {
+  // a variável armazena o retorno da função procuraNome
+  const estaNaLista = procuraNome(nome)
+  // verificar se estaNaLista é uma variável que tem algum valor ou não
+  // se tiver valor, será verdadeira e entrará no bloco
+  if(estaNaLista){
+    // estaNaLista verdadeira e imprime mensagem
+    document.getElementById("nome").classList.add("is-valid")
+    document.getElementById("status").innerHTML = `${estaNaLista} estava no rolê`
+    // return para encerrar a função
+    return
+  }
+  // caso estaNaLista não tiver valor, for vazia, ou undefined,
+  // da um throw para cair no catch
+  throw `${nome} nãããão estava no rolê`
+}
+
+document.getElementById("form-do-role").addEventListener("submit", function(event){
+  // Tira a ação padrão de submit com preventDefault
+  event.preventDefault()
+  // limpamos o nosso status (caso tenha alguma mensagem lá)
+  document.getElementById("status").innerHTML = ""
+  if(document.getElementById("nome").classList.contains("is-valid")){
+    document.getElementById("nome").classList.remove("is-valid")
+  }
+  if(document.getElementById("nome").classList.contains("is-invalid")){
+    document.getElementById("nome").classList.remove("is-invalid")
+  }
+  // pegamos o valor do campo
+  const valorCampo = document.getElementById("nome").value
+  
+  // precisamos validar o valor do valorCampo, caso esteja vazio
+  // ou não seja do tipo String
+  // caso tudo der sucesso, imprime a mensage pro usuário
+  // senão imprime o erro
+  // para isso usaremos o try catch, try executa funções
+  // caso dentro delas dtenha um throw, irá cair no catch
+  try{
+    validacao(valorCampo)
+    exibirNome(valorCampo)
+    console.log("sucesso")
+  }catch(erro){
+    // caso deu algum problema enquanto as funções do bloco try era 
+    // executado, irá cair aqui no catch e vamos imprimir o erro
+    console.log("ops!")
+    document.getElementById("status").innerHTML = erro
+    document.getElementById("nome").classList.add("is-invalid")
+  }
+})
+
+
+
+</script>
+
+</html>
